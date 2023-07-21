@@ -2,7 +2,7 @@
 echo -e "\e[35m<<<<<<<<<<nginx installation successfully>>>>>>>>>\e[0m"
 yum install nginx -y #&>>${log}
 echo -e "\e[35m<<<<<<<<<<copy successfully>>>>>>>>>\e[0m"
-cp nginx-roboshop.conf /etc/nginx/dafault.d/roboshop.conf #&>>${log}
+cp nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf #&>>${log}
 
 
 
