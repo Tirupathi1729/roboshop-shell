@@ -22,5 +22,3 @@ echo -e "\e[35m<<<<<<<<<<start successfully>>>>>>>>>\e[0m"
 systemctl enable nginx &>>${log}
 systemctl restart &>>${log}
 
-echo -e "\e[35m<<<<<<<<<<cat successfully>>>>>>>>>\e[0m"
-cat /etc/nginx/dafault.d/roboshop.conf &>>${log}
