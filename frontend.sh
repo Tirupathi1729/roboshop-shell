@@ -21,5 +21,5 @@ unzip /tmp/frontend.zip #&>>${log}
 
 echo -e "\e[35m<<<<<<<<<<start successfully>>>>>>>>>\e[0m"
 systemctl enable nginx #&>>${log}
-systemctl restart #&>>${log}
+systemctl restart nginx #&>>${log}
 
