@@ -1,4 +1,4 @@
-echo -e"\e[35m<<<<<<<<<<copy successfully>>>>>>>>>[0m"
+echo -e "\e[35m<<<<<<<<<<copy successfully>>>>>>>>>[0m"
 cp nginx-roboshop.conf /etc/nginx/dafault.d/roboshop.conf
 
 #yum install nginx -y
