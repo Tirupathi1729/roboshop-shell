@@ -1,10 +1,10 @@
 #log=/tmp/roboshop.log
-script_location=$(pwd)
-echo -e "\e[35m<<<<<<<<<<copy successfully>>>>>>>>>\e[0m"
-cp ${script_location}/files/nginx-roboshop.conf /etc/nginx/dafault.d/roboshop.conf #&>>${log}
-
 echo -e "\e[35m<<<<<<<<<<nginx installation successfully>>>>>>>>>\e[0m"
 yum install nginx -y #&>>${log}
+echo -e "\e[35m<<<<<<<<<<copy successfully>>>>>>>>>\e[0m"
+cp nginx-roboshop.conf /etc/nginx/dafault.d/roboshop.conf #&>>${log}
+
+
 
 echo -e "\e[35m<<<<<<<<<<remove old files successfully>>>>>>>>>\e[0m"
 rm -rf /usr/share/nginx/html/* #&>>${log}
