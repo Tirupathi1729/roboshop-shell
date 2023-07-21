@@ -11,7 +11,7 @@ rm -rf /usr/share/nginx/html/* &>>${log}
 echo -e "\e[35m<<<<<<<<<<downloading content successfully>>>>>>>>>\e[0m"
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>${log}
 
-echo -e "\e[35m<<<<<<<<<<change directiory successfully>>>>>>>>>\e[0m"
+echo -e "\e[35m<<<<<<<<<<change directory successfully>>>>>>>>>\e[0m"
 cd /usr/share/nginx/html &>>${log}
 
 echo -e "\e[35m<<<<<<<<<<unzip successfully>>>>>>>>>\e[0m"
