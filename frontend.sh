@@ -1,13 +1,26 @@
+log=/tmp/roboshop.log
 echo -e "\e[35m<<<<<<<<<<copy successfully>>>>>>>>>\e[0m"
-cp nginx-roboshop.conf /etc/nginx/dafault.d/roboshop.conf
+cp nginx-roboshop.conf /etc/nginx/dafault.d/roboshop.conf &>>log
 
-yum install nginx -y
+echo -e "\e[35m<<<<<<<<<<nginx installation successfully>>>>>>>>>\e[0m"
+yum install nginx -y &>>log
 
-rm -rf /usr/share/nginx/html/*
-curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
-cd /usr/share/nginx/html
-unzip /tmp/frontend.zip
+echo -e "\e[35m<<<<<<<<<<remove old files successfully>>>>>>>>>\e[0m"
+rm -rf /usr/share/nginx/html/* &>>log
 
-systemctl enable nginx
-systemctl restart nginx
-cat /etc/nginx/dafault.d/roboshop.conf
+echo -e "\e[35m<<<<<<<<<<downloading content successfully>>>>>>>>>\e[0m"
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>log
+
+echo -e "\e[35m<<<<<<<<<<change directiory successfully>>>>>>>>>\e[0m"
+cd /usr/share/nginx/html &>>log
+
+echo -e "\e[35m<<<<<<<<<<unzip successfully>>>>>>>>>\e[0m"
+unzip /tmp/frontend.zip &>>log
+
+
+echo -e "\e[35m<<<<<<<<<<start successfully>>>>>>>>>\e[0m"
+systemctl enable nginx &>>log
+systemctl restart &>>log
+
+echo -e "\e[35m<<<<<<<<<<cat successfully>>>>>>>>>\e[0m"
+cat /etc/nginx/dafault.d/roboshop.conf &>>log
