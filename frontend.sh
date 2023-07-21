@@ -1,6 +1,7 @@
 #log=/tmp/roboshop.log
+script_location=$(pwd)
 echo -e "\e[35m<<<<<<<<<<copy successfully>>>>>>>>>\e[0m"
-cp /home/centos/roboshop-shell/nginx-roboshop.conf /etc/nginx/dafault.d/roboshop.conf #&>>${log}
+cp ${script_location}/files/nginx-roboshop.conf /etc/nginx/dafault.d/roboshop.conf #&>>${log}
 
 echo -e "\e[35m<<<<<<<<<<nginx installation successfully>>>>>>>>>\e[0m"
 yum install nginx -y #&>>${log}
