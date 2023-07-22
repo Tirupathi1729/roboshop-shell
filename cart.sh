@@ -14,7 +14,7 @@ echo -e "\e[35m<<<<<<<<<<making directiory successfully>>>>>>>>>\e[0m"
 mkdir /app
 
 echo -e "\e[35m<<<<<<<<<<downloading and zipping successfully>>>>>>>>>\e[0m"
-curl -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip
+curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip
 cd /app
 unzip /tmp/user.zip
 cd /app
