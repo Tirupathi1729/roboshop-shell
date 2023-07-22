@@ -7,8 +7,6 @@ yum install python36 gcc python3-devel -y
 echo -e "\e[35m<<<<<<<<<<useradd successfully>>>>>>>>>\e[0m"
 useradd roboshop
 
-echo -e "\e[35m<<<<<<<<<<remove old files successfully>>>>>>>>>\e[0m"
-rm -rf /app
 
 echo -e "\e[35m<<<<<<<<<<making directiory successfully>>>>>>>>>\e[0m"
 mkdir /app
